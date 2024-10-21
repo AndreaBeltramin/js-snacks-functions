@@ -2,12 +2,12 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 
-
 // Dichiara la funzione qui.
-
+function initiali(item) {
+	console.log(item.charAt(0));
+}
 
 // Invoca la funzione qui e stampa il risultato in console
-
-
+names.forEach(initiali);
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]
