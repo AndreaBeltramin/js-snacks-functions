@@ -6,18 +6,28 @@ e buonasera se è sera (oltre le 17)
 */
 
 const name = "Mario";
-let now = new Date();
 
 // Dichiara la funzione qui.
 
-function saluto(nome, ora) {
-	//stampo la parola ciao seguita dal parametro nome che inserirò
-	if ((now.getHours = 13)) console.log("Buongiorno " + nome);
-	if ((now.getHours = 17)) console.log("Buon pomeriggio " + nome);
-	if ((now.getHours = 23)) console.log("Buonasera " + nome);
+function saluto(nome) {
+	const now = new Date();
+	const currentHours = now.getHours();
+
+	let greet;
+	//SE è mattina quindi prima delle 13
+	if (currentHours <= 13) {
+		greet = "Buongiorno";
+		//ALTRIMENTI SE è pomeriggio quindi prima delle 17
+	} else if (currentHours <= 17) {
+		greet = "Buon pomeriggio";
+		//ALTRIMENTI è sera
+	} else {
+		greet = "Buonasera";
+	}
+	return `${greet} ${name}`;
 }
 
 // Invoca la funzione qui e stampa il risultato in console
-saluto("Mario", 13);
+console.log(saluto("Mario"));
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
