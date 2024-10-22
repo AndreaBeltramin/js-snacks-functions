@@ -17,7 +17,7 @@ function firstLetterFilter(array, letteracercata) {
 
 // Invoca la funzione qui e stampa il risultato in console
 //applico alla costante filteredArray la funzione inserendo come parametri l'array names e la lettera a
-const filteredArray = firstLetterFilter(names, "A");
+const filteredArray = firstLetterFilter(names, searchedLetter);
 console.log(filteredArray);
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
